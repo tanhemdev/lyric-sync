@@ -4,7 +4,8 @@
 
 ---
 
-![Bad Bunny performing at Super Bowl LX](assets/bad-bunny-superbowl.jpg)
+<img width="799" height="601" alt="Screenshot 2026-08-05 at 8 19 13 PM" src="https://github.com/user-attachments/assets/4e34cef0-4619-4b0e-a998-c1077998ec80" />
+
 
 128.2 million people watched Bad Bunny perform at Super Bowl LX. The first artist to ever do the halftime show entirely in Spanish. 4.157 billion views globally in the first 24 hours. The whole stadium was on their feet.
 
