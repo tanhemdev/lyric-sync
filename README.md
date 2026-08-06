@@ -1,4 +1,4 @@
-# LyricSync 🎵
+# LyricSync 
 
 **Real-time synced lyric translations for non-English music on Spotify.**
 
