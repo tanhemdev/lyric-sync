@@ -30,15 +30,6 @@ Spotify Playback -> Timestamp Sync -> Contextual Translation Engine -> Side-by-S
 3. **Watch translations appear in real time**  -  synced line-by-line to the music
 4. **Tap any line** for cultural context notes, slang breakdowns, and alternate meanings
 
-<!-- Screenshot: side-by-side view during playback -->
-![Side-by-side translation view](assets/screenshots/side-by-side.png)
-
-<!-- Screenshot: cultural context popup -->
-![Cultural context notes](assets/screenshots/context-notes.png)
-
-<!-- Screenshot: song selection / album browser -->
-![Album browser](assets/screenshots/album-browser.png)
-
 ---
 
 ## Tech Stack
