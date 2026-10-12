@@ -1,0 +1,17 @@
+{
+  "name": "lyricsync",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Real-time, line-by-line lyric translations synced to Spotify.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test api/tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.133.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
