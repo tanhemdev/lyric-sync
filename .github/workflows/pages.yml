@@ -29,6 +29,9 @@ jobs:
         working-directory: web
       - run: npm run build
         working-directory: web
+      - name: Add the Chrome extension as a download
+        run: zip -qr ../web/dist/lyricsync-extension.zip .
+        working-directory: extension
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
