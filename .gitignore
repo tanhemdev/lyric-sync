@@ -4,3 +4,4 @@ web/dist/
 .env.local
 .vercel
 test-results/
+lyricsync-extension.zip

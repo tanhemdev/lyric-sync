@@ -2,13 +2,18 @@
   "name": "lyricsync",
   "version": "1.0.0",
   "private": true,
-  "description": "Real-time, line-by-line lyric translations synced to Spotify.",
+  "description": "Real-time, line-by-line lyric translations synced to Spotify and Apple Music.",
   "type": "module",
   "scripts": {
-    "test": "node --test api/tests/*.test.mjs"
+    "test": "node --test api/tests/*.test.mjs tests/extension/*.test.mjs",
+    "test:extension": "node tests/extension/e2e.mjs",
+    "package:extension": "cd extension && zip -qr ../lyricsync-extension.zip ."
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.133.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.0"
   },
   "engines": {
     "node": ">=20"
