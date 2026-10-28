@@ -80,6 +80,7 @@ export default function App() {
       </main>
 
       <footer className="foot">
+        <a href="https://github.com/tanhemdev/lyric-sync#chrome-extension-free">Free Chrome extension for Spotify and Apple Music</a> ·{' '}
         <a href="https://github.com/tanhemdev/lyric-sync">Code on GitHub</a> · Built by <a href="https://tanyahemdev.com">Tanya Hemdev</a>
       </footer>
     </div>
