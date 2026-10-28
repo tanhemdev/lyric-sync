@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LyricSync</title>
+    <link rel="stylesheet" href="panel.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M4 7h10M4 12h16M4 17h7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" /></svg>
+        </span>
+        <h1>LyricSync</h1>
+      </div>
+      <span id="pill" class="pill">Waiting for music</span>
+    </header>
+
+    <section id="idle" class="idle">
+      <h2>Play a song on Spotify or Apple Music</h2>
+      <p>
+        Open <a href="https://open.spotify.com" target="_blank" rel="noopener">Spotify</a> or
+        <a href="https://music.apple.com" target="_blank" rel="noopener">Apple Music</a> in a Chrome tab and play anything.
+        The lyrics and what they mean follow along here, line by line.
+      </p>
+      <h3>Or try one of these</h3>
+      <ul id="featured" class="featured"></ul>
+      <p class="small">Preview scrolls the lyrics on a timer, without audio. Play the song in Spotify or Apple Music to follow the real thing.</p>
+    </section>
+
+    <section id="player" class="player" hidden>
+      <div class="now">
+        <img id="art" alt="" width="48" height="48" hidden />
+        <div class="meta">
+          <p id="title" class="title"></p>
+          <p id="artist" class="artist"></p>
+        </div>
+      </div>
+      <div class="bar">
+        <span id="t-pos">0:00</span>
+        <div class="track"><div id="progress" class="fill"></div></div>
+        <span id="t-dur">0:00</span>
+      </div>
+      <div id="preview-controls" class="controls" hidden>
+        <button id="btn-play" type="button" class="primary">Pause</button>
+        <button id="btn-restart" type="button">Restart</button>
+        <button id="btn-exit" type="button">Back</button>
+      </div>
+      <div class="langs">
+        <label>Sung in <select id="src"></select></label>
+        <label>Translate into <select id="dst"></select></label>
+      </div>
+      <div id="notice" class="notice" hidden>
+        <p id="notice-text"></p>
+        <button id="notice-btn" type="button" class="primary" hidden></button>
+      </div>
+      <ol id="lines" class="lines"></ol>
+    </section>
+
+    <footer class="foot">
+      Lyrics from <a href="https://lrclib.net" target="_blank" rel="noopener">LRCLIB</a>. Translations run on this computer with
+      Chrome's built-in translator: free, and the lyrics never leave your device.
+      <a href="https://github.com/tanhemdev/lyric-sync" target="_blank" rel="noopener">Code</a>
+    </footer>
+
+    <script type="module" src="panel.js"></script>
+  </body>
+</html>
