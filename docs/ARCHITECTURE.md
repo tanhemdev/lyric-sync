@@ -55,6 +55,17 @@ Lyrics are fetched at play time in the listener's browser and never stored by Ly
 | Model | `claude-haiku-5-5` by default (fast, and the job is short), overridable with `ANTHROPIC_MODEL` |
 | Parse | Finds the JSON even if wrapped in prose or fences, matches entries by index, fills any gap with an empty line instead of failing the whole song |
 
+## Chrome extension (`extension/`)
+
+A Manifest V3 extension with a side panel, for following music in the Spotify and Apple Music web players at no cost.
+
+- **`content/page-hook.js`** runs in the player page's own JavaScript world, four times a second: title, artist and album from the Media Session, position and length from the audio element (players often keep it out of the page, so it notes every element that starts playing). On Spotify, if the element's length doesn't match the song, it falls back to the on-screen clock, timing when the seconds tick over for sub-second accuracy.
+- **`content/bridge.js`** forwards that to the side panel with `chrome.runtime.sendMessage`, and nowhere else.
+- **`panel.js`** follows the most recent playing tab, drives the same `clock.js` as the web app from those readings, and highlights the current line on each animation frame. Lyrics come from LRCLIB (`lib/lyrics.js`), with the featured songs pinned to entries in their own script.
+- **Translation** uses Chrome's on-device `Translator` API. The song's language comes from its script, then Chrome's `LanguageDetector`, then a common-word vote. Each distinct line is translated once; lines without the song's script (English hooks) are skipped. A language pack that isn't downloaded yet needs a click, which the panel asks for.
+- **Permissions:** `sidePanel` and `storage`, content scripts only on the two player sites, and host access only to LRCLIB.
+- `lib/lrc.js` and `lib/clock.js` are copies of the web app's; a unit test fails if they drift apart.
+
 ## Deployment
 
 | Target | What runs |
